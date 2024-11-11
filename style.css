@@ -1,0 +1,174 @@
+/* style.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.text{
+  font-size: 30px;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  min-width: 160px;
+}
+
+.dropdown-menu li {
+  padding: 8px 16px;
+}
+
+.dropdown-menu li a {
+  color: black;
+  text-decoration: none;
+}
+
+/* Show the dropdown menu on hover */
+.navbar-menu li:hover .dropdown-menu {
+  display: block;
+}
+
+.navbar-menu li:hover .dropdown-toggle {
+  background-color: #575757;
+}
+
+.recipe-cont{
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: start;
+  /* border: 1px solid yellow; */
+}
+
+.recipe-card {
+  min-width: 40%;
+  max-width: 40%; /* Ensures all cards stay the same width */
+  height: 200px; /* Adjust this value as needed for your design */
+  /* border: 1px solid red; */
+  padding: 16px;
+  /* overflow: hidden;s */
+}
+
+.recipe-card h2,
+.recipe-card h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Truncates lengthy titles */
+}
+
+.recipe-card p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Limits to 3 lines */
+  -webkit-box-orient: vertical;
+  line-clamp: 3; /* Add this line for standard compatibility */
+  box-orient: vertical; /* Add this line for standard compatibility */
+}
+
+
+
+.modal-hidden {
+    display: none;
+  }
+  
+  .modal-visible {
+    display: flex;
+  }
+  
+
+.img{
+    height: 150px;
+    width: 200px;
+   object-fit: cover;
+  border-radius: 6px;
+}
+
+/* form.css */
+.body-form {
+    background-color: #f7fafc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+  }
+  
+  .recipe-form-container {
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    /* max-width: 600px; */
+    width: 100%;
+    padding: 2rem;
+  }
+  
+  .recipe-form-header {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4a5568;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .form-label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #4a5568;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  
+  .form-input, .form-textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-input:focus, .form-textarea:focus {
+    border-color: #3182ce;
+    outline: none;
+  }
+  
+  .form-textarea {
+    resize: vertical;
+  }
+  
+  .submit-button {
+    width: 100%;
+    background-color: #3182ce;
+    color: white;
+    padding: 0.75rem;
+    font-weight: 600;
+    border-radius: 6px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #2b6cb0;
+    transform: scale(1.05);
+  }
+  
+  .submit-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(66, 153, 225, 0.6);
+  }
+  
+  @media (max-width: 640px) {
+    .recipe-form-container {
+      padding: 1.5rem;
+    }
+  
+    .recipe-form-header {
+      font-size: 1.5rem;
+    }
+  }
+  
